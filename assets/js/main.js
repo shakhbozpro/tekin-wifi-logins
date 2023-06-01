@@ -38,21 +38,24 @@ function formatTelephone(input) {
     const cleaned = input.value.replace(/\D/g, '');
     
     // Check if the input is empty or exceeds the maximum length
-    if (cleaned.length === 0 || cleaned.length > 9) {
+    if (cleaned.length === 0) {
         input.value = '';
         return;
     }
     
     // Format the telephone number based on the cleaned value
-    const formatted = '(' + cleaned.substring(0, 2) + ') ';
-    if (cleaned.length > 2) {
-        formatted += cleaned.substring(2, 5) + '-';
+    var formatted = '+998 ';
+    if (cleaned.length > 3) {
+        formatted += '(' + cleaned.substring(3, 5) + ') ';
     }
     if (cleaned.length > 5) {
-        formatted += cleaned.substring(5, 7) + '-';
+        formatted += cleaned.substring(5, 8) + '-';
     }
-    if (cleaned.length > 7) {
-        formatted += cleaned.substring(7, 9);
+    if (cleaned.length > 8) {
+        formatted += cleaned.substring(8, 10) + '-';
+    }
+    if (cleaned.length > 10) {
+        formatted += cleaned.substring(10, 12);
     }
     
     // Update the input value with the formatted telephone number

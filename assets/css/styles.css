@@ -467,7 +467,7 @@ body {
     transition: border-color 0.2s ease;
 }
 .login-tel-input {
-    padding-left: 130px;
+    padding-left: 150px;
 }
 .custom-select {
     position: relative;

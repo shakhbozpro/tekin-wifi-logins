@@ -469,6 +469,9 @@ body {
 .login-tel-input {
     padding-left: 150px;
 }
+.login-tel-input::placeholder {
+    font-size: 24px;
+}
 .custom-select {
     position: relative;
     top: -65px;

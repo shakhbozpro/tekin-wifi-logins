@@ -67,3 +67,9 @@ vaucherBtn.addEventListener("click", () => {
     const vaucherCodesWrapper = document.querySelector(".vaucher-codes-wrapper");
     vaucherCodesWrapper.classList.toggle("vaucher-active");
 });
+
+$(".vaucher-code-input").keyup(function () {
+    if (this.value.length == this.maxLength) {
+        $(this).next('.vaucher-code-input').focus();
+    }
+});

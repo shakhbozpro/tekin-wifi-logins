@@ -347,10 +347,15 @@ body {
     max-width: 565px;
     width: 100%;
     margin: 0 auto;
-    padding: 60px 60px 40px;
+    padding: 40px 20px 30px;
     text-align: center;
     background-color: #fff;
     box-shadow: 12px 19px 62px rgba(13, 52, 79, .1);
+}
+@media only screen and (min-width: 768px) {
+    .w-page-contents {
+        padding: 60px 60px 40px;
+    }
 }
 .logo-wrapper {
     margin-bottom: 30px;
@@ -507,10 +512,15 @@ body {
 
 .custom-select .select-selected:after {
     position: absolute;
-    top: 8px;
-    right: 5px;
+    top: 12px;
+    right: 4px;
+    width: 10px;
+    height: 7px;
+    background-image: url("../images/arrow-down.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
     pointer-events: none;
-    content: "\25BC";
+    content: "";
 }
 
 .custom-select .select-items {
@@ -591,7 +601,6 @@ body {
     align-items: center;
     margin-bottom: 16px;
     padding-left: 7px;
-    font-size: 14px;
     line-height: 1.5;
     color: #333333;
 }

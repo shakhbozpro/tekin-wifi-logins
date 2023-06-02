@@ -522,12 +522,12 @@ body {
         padding-left: 140px;
     }
     .custom-select {
-        left: -60px;
+        left: -98px;
     }
 }
 @media only screen and (min-width: 425px) {
     .custom-select {
-        left: -84px;
+        left: -124px;
     }
 }
 @media only screen and (min-width: 768px) {

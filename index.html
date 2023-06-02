@@ -5,16 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-
-
-
+    <!-- <link rel="stylesheet" href="./assets/css/styles.css"> -->
+    <link rel="stylesheet" href="./assets/css/styles.min.css">
 </head>
 <body>
     <div class="w-page">
@@ -29,7 +21,7 @@
                 <p class="w-page-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nulla sequi dolores aliquam id iusto. lorem10</p>
             </div>
             <div class="w-page-btns">
-                <button class="free-btn">Bepul wi-fi</button>
+                <a class="free-rate" href="./login.html">Bepul wi-fi</a>
                 <button class="price-btn">Pullik wi-fi</button>
             </div>
             <p class="qqm-text">
@@ -38,88 +30,10 @@
                 <a href="tel: +998901234567"><b>+998901234567</b></a>
             </p>
             <div class="w-page-bottom">
-                <button class="vaucher-btn">Vaucher orqali kirish</button>
-            </div>
-        </div>
-        
-        <div class="login-wrapper">
-            <div class="logo-wrapper">
-                <a class="w-page-logo" href="./index.html">
-                    <img src="./assets/images/logotip.png" alt="Tekin wi-fi logotipi" width="280" height="55">
-                </a>
-            </div>
-            <div class="login-texts">
-                <h2 class="login-title">Ro'yxatdan o'tish</h2>
-                <p class="login-subtitle">Ro'yxatdan o'tish uchun quyidagi ma'lumotlarni to'ldiring</p>
-            </div>
-            <form class="login-form">
-                <label class="login-label">
-                    To'liq ismingiz *
-                    <i class="fa-solid fa-user user-icon"></i>
-                    <input class="login-input" type="text" placeholder="Aliyev Bahodir Baxromovich">
-                </label>
-                <label class="login-label">
-                    Telefon raqamingiz *
-                    <!-- <i class="fa-solid fa-phone user-icon"></i> -->
-                    <input class="login-input login-tel-input" id="phone" type="text" name="telephone" maxlength="19" placeholder="(__) ____-___-___" oninput="formatTelephone(this)">
-                </label>
-                <div class="custom-select">
-                    <div class="select-selected">
-                        <img class="region-img" src="./assets/images/flag-uzb.jpg" alt="Uzbekiston bayrog'i" width="26" height="18">Uz +998
-                    </div>
-                    <div class="select-items">
-                        <div data-value="option1">
-                            <img class="region-img" src="./assets/images/flag-uzb.jpg" alt="Uzbekiston bayrog'i" width="26" height="18">Uz +998
-                        </div>
-                    </div>
-                </div>
-                <label class="login-label">Jinsingizni *</label>
-                <div class="login-sexs-wrapper">
-                    <label class="sex-label">
-                        Erkak
-                        <input class="sex-input" type="radio" name="user_jinsi" value="erkak">
-                    </label>
-                    <label class="sex-label">
-                        Ayol
-                        <input class="sex-input" type="radio" name="user_jinsi" value="ayol">
-                    </label>
-                </div>
-                <button class="login-submit-btn" type="submit">Ro'yxatdan o'tish</button>
-            </form>
-            <p class="login-bottom-text">
-                Ro'yxatdan o'tish orqali siz barcha <a href="#"><b>Foydalanish shartlariga</b></a> rozilik bildirgan bo'lasiz!
-            </p>
-        </div>
-        
-        <div class="vaucher-codes-wrapper">
-            <div class="logo-wrapper">
-                <a class="w-page-logo" href="./index.html">
-                    <img src="./assets/images/logo.png" alt="Tekin wi-fi logotipi" width="270" height="155">
-                </a>
-            </div>
-            <form class="vaucher-code-form">
-                <label class="vaucher-codes-label">6 ta raqamdan iborat bo'lgan sms kodni kiriting</label>
-                <div class="vaucher-codes-inputs" data-group-name="digits" data-autosubmit="false">
-                    <input class="vaucher-code-input" type="text" maxlength="1" autofocus/>
-                    <input class="vaucher-code-input" type="text" maxlength="1"/>
-                    <input class="vaucher-code-input" type="text" maxlength="1"/>
-                    <input class="vaucher-code-input" type="text" maxlength="1"/>
-                    <input class="vaucher-code-input" type="text" maxlength="1"/>
-                    <input class="vaucher-code-input" type="text" maxlength="1"/>
-                </div>
-                <button class="vaucher-submit-btn" type="submit">Verify</button>
-            </form>
-            <div class="otp-bottom">
-                <p class="vaucher-bottom-text">Xabarnomani olmadingizmi? <a href="#">Xabarni qayta yuborish</a></p>
+                <a class="vaucher-link" href="./vaucher.html">Vaucher orqali kirish</a>
             </div>
         </div>
     </div>
-    
-    <script>
-        $(document).ready(function() {
-            $('#phone').mask('(00) 000-00-00');
-        });
-    </script>
     <script src="./assets/js/main.js"></script>
 </body>
 </html>

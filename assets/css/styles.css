@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -41,6 +48,7 @@ main {
 */
 
 hr {
+    -webkit-box-sizing: content-box;
     box-sizing: content-box; /* 1 */
     height: 0; /* 1 */
     overflow: visible; /* 2 */
@@ -75,6 +83,7 @@ a {
 abbr[title] {
     border-bottom: none; /* 1 */
     text-decoration: underline; /* 2 */
+    -webkit-text-decoration: underline dotted;
     text-decoration: underline dotted; /* 2 */
 }
 
@@ -207,6 +216,7 @@ fieldset {
 */
 
 legend {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box; /* 1 */
     color: inherit; /* 2 */
     display: table; /* 1 */
@@ -238,6 +248,7 @@ textarea {
 
 [type="checkbox"],
 [type="radio"] {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box; /* 1 */
     padding: 0; /* 2 */
 }
@@ -350,6 +361,7 @@ body {
     padding: 40px 20px 30px;
     text-align: center;
     background-color: #fff;
+    -webkit-box-shadow: 12px 19px 62px rgba(13, 52, 79, .1);
     box-shadow: 12px 19px 62px rgba(13, 52, 79, .1);
 }
 @media only screen and (min-width: 768px) {
@@ -395,8 +407,15 @@ body {
     color: #999;
 }
 .w-page-btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-bottom: 40px;
     font-size: 18px;
@@ -414,14 +433,24 @@ body {
     color: #666666;
     text-decoration: none;
 }
-.free-btn {
+.free-rate {
     width: 100%;
     height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     margin-bottom: 12px;
-    padding: 0 20px;
     font-weight: 600;
     line-height: 1.2;
     text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
     background-color: #fff;
     border: 1.5px solid #000;
     cursor: pointer;
@@ -439,12 +468,12 @@ body {
     cursor: pointer;
 }
 .login-wrapper {
-    display: none !important;
     max-width: 450px;
     margin: 0 auto;
     padding: 40px 20px 30px;
     text-align: center;
     background-color: #fff;
+    -webkit-box-shadow: 12px 19px 62px rgba(13, 52, 79, .1);
     box-shadow: 12px 19px 62px rgba(13, 52, 79, .1);
 }
 @media only screen and (min-width: 768px) {
@@ -453,16 +482,20 @@ body {
         padding: 60px 60px 40px;
     }
 }
-.login-wrapper-active {
-    display: block !important;
-}
 .login-wrapper .logo-wrapper {
     margin: 0 auto 30px;
 }
 .login-wrapper,
 .login-label {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: start;
 }
 .login-texts {
@@ -473,6 +506,7 @@ body {
     margin-bottom: 12px;
     padding-left: 12px;
     font-weight: 600;
+    font-size: 28px;
     color: #454545;
 }
 .login-subtitle {
@@ -497,16 +531,26 @@ body {
     height: 55px;
     padding: 0 7px 0 43px;
     font-family: "Poppins", "Arial", sans-serif;
-    font-size: 17px;
+    font-size: 15px;
     line-height: 1.2;
     background: transparent;
     border: none;
     border-bottom: 2px solid #d3d3d3;
     outline: none;
+    -webkit-transition: border-color 0.2s ease;
+    -o-transition: border-color 0.2s ease;
     transition: border-color 0.2s ease;
 }
 .login-tel-input {
     padding-left: 136px;
+}
+.login-waring-span {
+    position: absolute;
+    bottom: -24px;
+    left: 8px;
+    font-family: "Poppins", "Arial", sans-serif;
+    font-size: 13px;
+    color: red;
 }
 .custom-select {
     position: relative;
@@ -537,7 +581,11 @@ body {
 }
 
 .custom-select .select-selected {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 6px 8px;
     background-color: #f1f1f1;
@@ -570,12 +618,17 @@ body {
     z-index: 20;
     min-width: 160px;
     background-color: #f9f9f9;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     display: none;
 }
 
 .custom-select .select-items div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 8px;
     cursor: pointer;
@@ -629,6 +682,26 @@ body {
 .login-input:focus {
     border-bottom-color: #929292;
 }
+.login-input::-webkit-input-placeholder {
+    font-weight: 600;
+    font-size: 14px;
+    color: #9a9a9a;
+}
+.login-input::-moz-placeholder {
+    font-weight: 600;
+    font-size: 14px;
+    color: #9a9a9a;
+}
+.login-input:-ms-input-placeholder {
+    font-weight: 600;
+    font-size: 14px;
+    color: #9a9a9a;
+}
+.login-input::-ms-input-placeholder {
+    font-weight: 600;
+    font-size: 14px;
+    color: #9a9a9a;
+}
 .login-input::placeholder {
     font-weight: 600;
     font-size: 14px;
@@ -639,7 +712,11 @@ body {
 }
 .login-sexs-wrapper,
 .sex-label {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-bottom: 16px;
     padding-left: 7px;
@@ -654,18 +731,24 @@ body {
 }
 .vaucher-codes-wrapper {
     max-width: 565px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
+    -webkit-box-shadow: 12px 19px 62px rgba(13, 52, 79, .1);
     box-shadow: 12px 19px 62px rgba(13, 52, 79, .1);
-    display: none;
-}
-.vaucher-active {
-    display: block;
 }
 .vaucher-code-form {
     margin: 50px 40px;
@@ -677,9 +760,16 @@ body {
     color: #454545;
 }
 .vaucher-codes-inputs {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-right: -5px;
     margin-left: -5px;  
@@ -691,6 +781,7 @@ body {
     padding: 20px;
     text-align: center;
     border: 1px solid #eee;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 5px;
 }
@@ -703,8 +794,9 @@ body {
         margin: 0 8px;
     }
 }
-.vaucher-btn {
+.vaucher-link {
     font-family: "Poppins", "Arial", sans-serif;
+    text-decoration: none;
 }
 .vaucher-submit-btn {
     width: 100%;

@@ -33,34 +33,36 @@ document.addEventListener("click", function(event) {
     }
 });
 
-function formatTelephone(input) {
-    // Remove all non-digit characters from the input value
-    const cleaned = input.value.replace(/\D/g, '');
+
+// function formatTelephone(input) {
+//     // Remove all non-digit characters from the input value
+//     const cleaned = input.value.replace(/\D/g, '');
     
-    // Check if the input is empty or exceeds the maximum length
-    if (cleaned.length === 0) {
-        input.value = '';
-        return;
-    }
+//     // Check if the input is empty or exceeds the maximum length
+//     if (cleaned.length === 0) {
+//         input.value = '';
+//         return;
+//     }
     
-    // Format the telephone number based on the cleaned value
-    var formatted = '+998 ';
-    if (cleaned.length > 3) {
-        formatted += '(' + cleaned.substring(3, 5) + ') ';
-    }
-    if (cleaned.length > 5) {
-        formatted += cleaned.substring(5, 8) + '-';
-    }
-    if (cleaned.length > 8) {
-        formatted += cleaned.substring(8, 10) + '-';
-    }
-    if (cleaned.length > 10) {
-        formatted += cleaned.substring(10, 12);
-    }
+//     let formatted = '+998 ';
+//     // Format the telephone number based on the cleaned value
+//     if (cleaned.length > 3) {
+//         formatted += '(' + cleaned.substring(3, 5) + ') ';
+//     }
+//     if (cleaned.length > 5) {
+//         formatted += cleaned.substring(5, 8) + '-';
+//     }
+//     if (cleaned.length > 8) {
+//         formatted += cleaned.substring(8, 10) + '-';
+//     }
+//     if (cleaned.length > 10) {
+//         formatted += cleaned.substring(10, 12);
+//     }
     
-    // Update the input value with the formatted telephone number
-    input.value = formatted;
-}
+//     // Update the input value with the formatted telephone number
+//     input.value = formatted;
+// }
+
 
 vaucherBtn.addEventListener("click", () => {
     wPageContents.style.display = "none";
